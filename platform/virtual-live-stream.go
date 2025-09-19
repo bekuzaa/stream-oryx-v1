@@ -18,7 +18,6 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"syscall"
 	"time"
 
 	"github.com/ossrs/go-oryx-lib/errors"
@@ -1070,7 +1069,7 @@ func (v *VLiveTask) cleanup(ctx context.Context) error {
 	}
 
 	logger.Wf(ctx, "kill task pid=%v", v.PID)
-	syscall.Kill(int(v.PID), syscall.SIGKILL)
+	KillProcess(int(v.PID))
 
 	v.PID = 0
 	v.cancel = nil

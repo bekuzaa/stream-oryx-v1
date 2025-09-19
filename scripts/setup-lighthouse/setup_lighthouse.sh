@@ -28,7 +28,7 @@ cd $WORK_DIR
 # The main directory.
 SRS_HOME=/usr/local/oryx
 DATA_HOME=/data
-IMAGE_URL=registry.cn-hangzhou.aliyuncs.com/ossrs/oryx:5
+IMAGE_URL=registry.cn-hangzhou.aliyuncs.com/ossrs/oryx:6
 SOURCE=$WORK_DIR
 
 mkdir -p /usr/local/lighthouse/softwares/oryx &&

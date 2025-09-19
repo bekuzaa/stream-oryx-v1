@@ -82,33 +82,50 @@ function LoginImpl({onLogin}) {
 
   return (
     <>
-      <Container fluid>
-        <Form>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>{t('login.passwordLabel')}</Form.Label>
-            {
-              !plaintext &&
-              <Form.Control type="password" placeholder="Password" ref={passwordRef} defaultValue={password}
-                onChange={(e) => setPassword(e.target.value)}/>
-            }
-            {
-              plaintext &&
-              <Form.Control type="text" placeholder="Password" ref={plaintextRef} defaultValue={password}
-                onChange={(e) => setPassword(e.target.value)}/>
-            }
-            <Form.Text className="text-muted">
-              * {t('login.passwordTip')}
-            </Form.Text>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label={t('login.labelShow')} defaultChecked={plaintext}
-              onClick={() => setPlaintext(!plaintext)}/>
-          </Form.Group>
-          <Button variant="primary" type="submit" disabled={operating} onClick={(e) => handleLogin(e)}>
-            {t('login.labelLogin')}
-          </Button> &nbsp;
-          {operating && <Spinner animation="border" variant="success" style={{verticalAlign: 'middle'}} />}
-        </Form>
+      <Container fluid className="fade-in">
+        <div className="row justify-content-center">
+          <div className="col-md-6 col-lg-4">
+            <div className="card">
+              <div className="card-header text-center">
+                <h4 className="mb-0">{t('login.title') || 'Login to ORYX'}</h4>
+              </div>
+              <div className="card-body">
+                <Form>
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>{t('login.passwordLabel')}</Form.Label>
+                    {
+                      !plaintext &&
+                      <Form.Control type="password" placeholder="Password" ref={passwordRef} defaultValue={password}
+                        onChange={(e) => setPassword(e.target.value)}/>
+                    }
+                    {
+                      plaintext &&
+                      <Form.Control type="text" placeholder="Password" ref={plaintextRef} defaultValue={password}
+                        onChange={(e) => setPassword(e.target.value)}/>
+                    }
+                    <Form.Text className="text-muted">
+                      * {t('login.passwordTip')}
+                    </Form.Text>
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label={t('login.labelShow')} defaultChecked={plaintext}
+                      onClick={() => setPlaintext(!plaintext)}/>
+                  </Form.Group>
+                  <div className="d-grid gap-2">
+                    <Button variant="primary" type="submit" disabled={operating} onClick={(e) => handleLogin(e)}>
+                      {t('login.labelLogin')}
+                    </Button>
+                  </div>
+                  {operating && (
+                    <div className="text-center mt-3">
+                      <Spinner animation="border" variant="primary" style={{verticalAlign: 'middle'}} />
+                    </div>
+                  )}
+                </Form>
+              </div>
+            </div>
+          </div>
+        </div>
       </Container>
     </>
   );

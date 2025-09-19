@@ -12,7 +12,6 @@ import (
 	"sort"
 	"strings"
 	"sync"
-	"syscall"
 	"time"
 
 	// From ossrs.
@@ -431,7 +430,7 @@ func (v *ForwardTask) cleanup(ctx context.Context) error {
 	}
 
 	logger.Wf(ctx, "kill task pid=%v", v.PID)
-	syscall.Kill(int(v.PID), syscall.SIGKILL)
+	KillProcess(int(v.PID))
 
 	v.PID = 0
 	v.cancel = nil

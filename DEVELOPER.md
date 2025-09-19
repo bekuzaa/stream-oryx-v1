@@ -949,7 +949,7 @@ Oryx will regenerate the ASR and translation, then delete the `regenerate.txt` t
 
 ## WebRTC Candidate
 
-Oryx follows the rules for WebRTC candidate, see [CANDIDATE](https://ossrs.io/lts/en-us/docs/v5/doc/webrtc#config-candidate),
+Oryx follows the rules for WebRTC candidate, see [CANDIDATE](https://ossrs.io/lts/en-us/docs/v6/doc/webrtc#config-candidate),
 but also has extra improvements for we can do more after proxy the API.
 
 1. Disable `use_auto_detect_network_ip` and `api_as_candidates` in SRS config.

@@ -19,7 +19,7 @@ VERBOSE=no
 LANGUAGE=zh
 REGISTRY=auto
 REGION=auto
-IMAGE=ossrs/oryx:5
+IMAGE=ossrs/oryx:6
 
 # Allow use config to override the default values.
 # For BT, should never use .env, because it will be removed when install.

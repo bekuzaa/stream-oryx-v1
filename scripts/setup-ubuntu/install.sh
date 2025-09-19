@@ -15,7 +15,7 @@ VERBOSE=no
 LANGUAGE=zh
 REGISTRY=auto
 REGION=auto
-IMAGE=ossrs/oryx:5
+IMAGE=ossrs/oryx:6
 
 # Allow use .env to override the default values.
 if [[ -f ${SCRIPT_DIR}/.env ]]; then source ${SCRIPT_DIR}/.env; fi

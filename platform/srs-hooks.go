@@ -1,8 +1,6 @@
-//
 // Copyright (c) 2022-2024 Winlin
 //
 // SPDX-License-Identifier: MIT
-//
 package main
 
 import (
@@ -21,6 +19,7 @@ import (
 	"github.com/ossrs/go-oryx-lib/errors"
 	ohttp "github.com/ossrs/go-oryx-lib/http"
 	"github.com/ossrs/go-oryx-lib/logger"
+
 	// Use v8 because we use Go 1.16+, while v9 requires Go 1.18+
 	"github.com/go-redis/redis/v8"
 	cam "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cam/v20190116"
@@ -68,7 +67,7 @@ func handleHooksService(ctx context.Context, handler *http.ServeMux) error {
 	logger.Tf(ctx, "Handle %v", ep)
 	handler.HandleFunc(ep, versionHandler)
 
-	// See https://ossrs.io/lts/en-us/docs/v5/doc/http-callback
+	// See https://ossrs.io/lts/en-us/docs/v6/doc/http-callback
 	ep = "/terraform/v1/hooks/srs/verify"
 	logger.Tf(ctx, "Handle %v", ep)
 	handler.HandleFunc(ep, func(w http.ResponseWriter, r *http.Request) {

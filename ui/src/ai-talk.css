@@ -59,7 +59,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  user-select:none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border-radius: 3%;
 }
 
@@ -135,15 +138,21 @@
 }
 
 .ai-talk-container-pc, .ai-talk-container-mobile{
-  background-color: #555555;
+  background: var(--bs-card-bg, #555555);
+  border: 1px solid var(--bs-border-color, #666);
+  box-shadow: var(--card-shadow, 0 4px 6px rgba(0,0,0,0.1));
+  transition: all 0.3s ease;
 }
 
 .ai-talk-gn-normal{
-  background-color: #787878;
+  background: var(--bs-secondary, #787878);
+  transition: all 0.3s ease;
 }
 
 .ai-talk-gn-active{
-  background-color: #60B460;
+  background: var(--bs-success, #60B460);
+  box-shadow: 0 0 20px rgba(96, 180, 96, 0.5);
+  transition: all 0.3s ease;
 }
 
 .ai-talk-mc:before{

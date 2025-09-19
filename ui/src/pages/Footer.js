@@ -37,14 +37,22 @@ function FooterImpl() {
   }, [handleError]);
 
   return (
-    <Container fluid>
-      <p></p>
-      <p className="text-center">
-        <a href='https://github.com/ossrs/oryx' target='_blank' rel='noreferrer'>
-          &copy;Oryx/v{versions?.data?.version}
-        </a>
-        &nbsp; <a href='https://beian.miit.gov.cn' target='_blank' rel='noreferrer'>{beian?.icp}</a>
-      </p>
-    </Container>
+    <footer className="footer mt-auto py-3">
+      <Container fluid>
+        <p className="text-center mb-0">
+          <a href='https://github.com/ossrs/oryx' target='_blank' rel='noreferrer' className="text-decoration-none">
+            &copy;Oryx/v{versions?.data?.version}
+          </a>
+          {beian?.icp && (
+            <>
+              &nbsp; | &nbsp;
+              <a href='https://beian.miit.gov.cn' target='_blank' rel='noreferrer' className="text-decoration-none">
+                {beian.icp}
+              </a>
+            </>
+          )}
+        </p>
+      </Container>
+    </footer>
   );
 }

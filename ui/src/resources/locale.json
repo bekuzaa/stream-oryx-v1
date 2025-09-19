@@ -350,7 +350,7 @@
         },
         "rtc": {
           "check": "检查网络连通性请参考",
-          "connectivity": "https://ossrs.net/lts/zh-cn/docs/v5/doc/webrtc#connection-failures",
+          "connectivity": "https://ossrs.net/lts/zh-cn/docs/v6/doc/webrtc#connection-failures",
           "title": "WebRTC: WHIP网页推流",
           "whep": "请使用内网或公网IP访问后台，WHEP不支持localhost访问。",
           "https": "请使用HTTPS访问管理后台。若使用自签名证书，请点击高级，然后继续访问",
@@ -1023,7 +1023,7 @@
           "whep": "Please use intranet or public network IP to access the background, WHEP does not support localhost access.",
           "https": "Please use HTTPS to access this page. If you use a self-signed certificate, please click Advanced, then Proceed to unsafe",
           "title": "WebRTC: WHIP Browser",
-          "connectivity": "https://ossrs.io/lts/en-us/docs/v5/doc/webrtc#connection-failures",
+          "connectivity": "https://ossrs.io/lts/en-us/docs/v6/doc/webrtc#connection-failures",
           "check": "check connectivity by"
         },
         "srt": {

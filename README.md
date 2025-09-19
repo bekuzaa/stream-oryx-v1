@@ -102,7 +102,7 @@ your own high-quality streaming and RTC platforms to support your businesses.
 
 ## Tutorials
 
-- [x] Getting Started: [Blog](https://blog.ossrs.io/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6), [EN](https://ossrs.io/lts/en-us/docs/v6/doc/getting-started-stack), [CN](https://ossrs.net/lts/zh-cn/docs/v5/doc/getting-started-stack).
+- [x] Getting Started: [Blog](https://blog.ossrs.io/how-to-setup-a-video-streaming-service-by-1-click-e9fe6f314ac6), [EN](https://ossrs.io/lts/en-us/docs/v6/doc/getting-started-stack), [CN](https://ossrs.net/lts/zh-cn/docs/v6/doc/getting-started-stack).
 - [x] Support WordPress Plugin: [Blog](https://blog.ossrs.io/publish-your-srs-livestream-through-wordpress-ec18dfae7d6f), [EN](https://ossrs.io/lts/en-us/blog/WordPress-Plugin), [CN](https://ossrs.net/lts/zh-cn/blog/WordPress-Plugin) or [WordPress Plugin](https://wordpress.org/plugins/srs-player).
 - [x] Support Automatic HTTPS: [Blog](https://blog.ossrs.io/how-to-secure-srs-with-lets-encrypt-by-1-click-cb618777639f), [EN](https://ossrs.io/lts/en-us/blog/Oryx-Tutorial), [CN](https://ossrs.net/lts/zh-cn/blog/Oryx-HTTPS).
 - [x] Support aaPanel to install on any linux: [Blog](https://blog.ossrs.io/how-to-setup-a-video-streaming-service-by-aapanel-9748ae754c8c), [EN](https://ossrs.io/lts/en-us/blog/BT-aaPanel), [CN](https://ossrs.net/lts/zh-cn/blog/BT-aaPanel).

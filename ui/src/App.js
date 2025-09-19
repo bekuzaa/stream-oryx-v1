@@ -6,6 +6,7 @@
 import React from 'react';
 import axios from "axios";
 import './App.css';
+import './theme.css';
 import './ai-talk.css';
 import './ai-dubbing.css';
 import './ai-ocr.css';
@@ -34,19 +35,22 @@ import {ErrorBoundary, useErrorHandler} from 'react-error-boundary';
 import {SrsErrorBoundary} from "./components/SrsErrorBoundary";
 import resources from "./resources/locale.json";
 import {SrsEnvContext} from "./components/SrsEnvContext";
+import {ThemeProvider} from "./components/ThemeProvider";
 import Popouts from "./pages/Popouts";
 
 function App() {
   const [env, setEnv] = React.useState(null);
 
   return (
-    <SrsEnvContext.Provider value={[env, setEnv]}>
-      <ErrorBoundary FallbackComponent={(RootError)}>
-        <SrsErrorBoundary>
-          <AppPreImpl/>
-        </SrsErrorBoundary>
-      </ErrorBoundary>
-    </SrsEnvContext.Provider>
+    <ThemeProvider>
+      <SrsEnvContext.Provider value={[env, setEnv]}>
+        <ErrorBoundary FallbackComponent={(RootError)}>
+          <SrsErrorBoundary>
+            <AppPreImpl/>
+          </SrsErrorBoundary>
+        </ErrorBoundary>
+      </SrsEnvContext.Provider>
+    </ThemeProvider>
   );
 }
 

@@ -14,12 +14,12 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"syscall"
 	"time"
 
 	"github.com/ossrs/go-oryx-lib/errors"
 	ohttp "github.com/ossrs/go-oryx-lib/http"
 	"github.com/ossrs/go-oryx-lib/logger"
+
 	// Use v8 because we use Go 1.16+, while v9 requires Go 1.18+
 	"github.com/go-redis/redis/v8"
 	"github.com/google/uuid"
@@ -700,7 +700,7 @@ func (v *CameraTask) cleanup(ctx context.Context) error {
 	}
 
 	logger.Wf(ctx, "kill task pid=%v", v.PID)
-	syscall.Kill(int(v.PID), syscall.SIGKILL)
+	KillProcess(int(v.PID))
 
 	v.PID = 0
 	v.cancel = nil

@@ -9,6 +9,7 @@ import {Navbar, Nav} from 'react-bootstrap';
 import {Link, useLocation} from "react-router-dom";
 import logo from '../resources/logo.svg';
 import LanguageSwitch from "../components/LanguageSwitch";
+import {ThemeToggleButton} from "../components/ThemeProvider";
 import {useTranslation} from "react-i18next";
 
 export default function Navigator({initialized, token, localChanged}) {
@@ -41,9 +42,9 @@ export default function Navigator({initialized, token, localChanged}) {
   }, [initialized, token, location, t]);
 
   return (<>
-    <Navbar>
+    <Navbar className="slide-in">
       <Container fluid className={{color:'#fff'}}>
-        <Navbar.Brand>
+        <Navbar.Brand className="fade-in">
           <img
             src={logo}
             width="64"
@@ -60,7 +61,8 @@ export default function Navigator({initialized, token, localChanged}) {
                 eventKey={e.eventKey}
                 to={e.to}
                 key={index}
-                className={e.className}
+                className={`${e.className} slide-in`}
+                style={{animationDelay: `${index * 0.1}s`}}
               >
                 {e.text}
               </Nav.Link>
@@ -69,6 +71,7 @@ export default function Navigator({initialized, token, localChanged}) {
         </Nav>
         <Navbar.Collapse className="justify-content-end">
           <LanguageSwitch localChanged={localChanged} />
+          <ThemeToggleButton />
         </Navbar.Collapse>
       </Container>
     </Navbar>
