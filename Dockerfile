@@ -37,6 +37,9 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 # By default, make all, including platform and ui, but it will take a long time,
 # so there is a MAKEARGS to build without UI, see platform.yml.
 WORKDIR /g
+# Sync vendor directory with go.mod before building
+RUN cd platform && go mod vendor
+RUN cd test && go mod vendor
 # We define SRS_NO_LINT to disable the lint check.
 RUN export SRS_NO_LINT=1 && \
     make clean && make -j ${MAKEARGS} && make install

@@ -6,7 +6,7 @@ default: build
 build: npm build build-cn build-en
 
 npm: lint
-	npm install
+	npm install --legacy-peer-deps
 
 # Don't run lint in GitHub Actions, because it crashes the build.
 # See https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables
